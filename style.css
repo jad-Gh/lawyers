@@ -985,7 +985,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 20, sass/layout/_header.scss */
 #branding .logo { margin-right: 10px; }
 /* line 23, sass/layout/_header.scss */
-#branding .site-title { margin: 0; font-size: 14px; font-size: 0.875em; font-weight: 600; text-transform: uppercase; line-height: 1; }
+#branding .site-title { margin: 0; font-size: 14px; font-size: 0.875em; font-weight: 600; text-transform: capitalize; line-height: 1; }
 /* line 30, sass/layout/_header.scss */
 #branding .site-title a { color: inherit; }
 /* line 32, sass/layout/_header.scss */
