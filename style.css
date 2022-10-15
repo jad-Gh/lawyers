@@ -225,7 +225,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 119, sass/libs/_components.scss */
 .feature-grid .feature p { margin-bottom: 0; }
 /* line 122, sass/libs/_components.scss */
-.feature.boxed { padding: 30px; background-color: #111113; margin-bottom: 30px; }
+.feature.boxed { padding: 21px; background-color: #111113; margin-bottom: 30px; }
 /* line 127, sass/libs/_components.scss */
 .feature.boxed p { margin-bottom: 0; }
 
@@ -289,7 +289,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 @media screen and (max-width: 640px) { /* line 242, sass/libs/_components.scss */
   .timeline { margin-left: 30px; border-top: 0; border-left: 3px solid #28292c; } }
 /* line 252, sass/libs/_components.scss */
-.timeline .milestone { width: 25%; padding: 30px 15px 0; float: left; text-align: center; position: relative; }
+.timeline .milestone { width: 20%; padding: 30px 15px 0; float: left; text-align: center; position: relative; }
 /* line 260, sass/libs/_components.scss */
 .timeline .milestone:before { content: " "; width: 29px; height: 29px; background: url(images/bullet.png) no-repeat; display: block; position: absolute; top: -15px; left: 0; right: 0; margin: auto; }
 @media screen and (max-width: 640px) { /* line 252, sass/libs/_components.scss */
@@ -326,6 +326,11 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 
 /* Team */
 /* line 349, sass/libs/_components.scss */
+.team-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .team { text-align: center; margin-bottom: 30px; width: 25%; padding: 0 15px; float: left; }
 @media screen and (max-width: 990px) { /* line 349, sass/libs/_components.scss */
   .team { width: 50%; } }
