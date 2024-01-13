@@ -289,7 +289,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 @media screen and (max-width: 640px) { /* line 242, sass/libs/_components.scss */
   .timeline { margin-left: 30px; border-top: 0; border-left: 3px solid #28292c; } }
 /* line 252, sass/libs/_components.scss */
-.timeline .milestone { width: 20%; padding: 30px 15px 0; float: left; text-align: center; position: relative; }
+.timeline .milestone { width: 16.6%; padding: 30px 10px 0; float: left; text-align: center; position: relative; }
 /* line 260, sass/libs/_components.scss */
 .timeline .milestone:before { content: " "; width: 29px; height: 29px; background: url(images/bullet.png) no-repeat; display: block; position: absolute; top: -15px; left: 0; right: 0; margin: auto; }
 @media screen and (max-width: 640px) { /* line 252, sass/libs/_components.scss */
