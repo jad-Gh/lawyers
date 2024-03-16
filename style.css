@@ -10,6 +10,42 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 /* line 61, sass/libs/_normalize.scss */
 audio, canvas, video { display: inline-block; }
 
+.cookie {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #668cff;
+  padding: 10px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.cookie p {
+  margin: 0;
+  color: #f7f7f7;
+  text-align: center;
+  font-family: "Novecento Sans", "Open Sans", sans-serif;
+}
+
+.cookie button {
+  padding: 10px 20px; 
+  background: #f7f7f7; 
+  border: 2px solid #668cff; 
+  color: #ac8074; 
+  font-family: "Novecento Sans", "Open Sans", sans-serif; 
+  text-transform: uppercase; 
+  font-size: 14px; 
+  font-size: 0.875em; 
+  outline: none; 
+  -webkit-transition: .3s ease; 
+  transition: .3s ease;
+}
+
+.cookie button:hover {
+  background-color: #ac8074;
+   color: #f7f7f7;
+}
+
 /* line 74, sass/libs/_normalize.scss */
 audio:not([controls]) { display: none; height: 0; }
 
@@ -17,7 +53,7 @@ audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
 
 /* line 97, sass/libs/_normalize.scss */
-html { background: #fff; color: #000; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html { background: #f7f7f7; color: #000; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 /* line 109, sass/libs/_normalize.scss */
 html, button, input, select, textarea { font-family: sans-serif; }
@@ -139,10 +175,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* Global Styles */
 /* line 5, sass/libs/_global.scss */
-body { font-family: Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 1.5; color: #888; background-color: #161719; }
+body { font-family: Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 1.5; color: #444444; background-color: #f0f0f0; }
 
 /* line 17, sass/libs/_global.scss */
-h1, h2, h3, h4, h5, h6 { margin-top: 0; color: #FFFFFF; font-family: "Novecento Sans", "Open Sans", sans-serif; font-weight: 600; text-transform: uppercase; }
+h1, h2, h3, h4, h5, h6 { margin-top: 0; color: #313638; font-family: "Novecento Sans", "Open Sans", sans-serif; font-weight: 600; text-transform: uppercase; }
 
 /* line 25, sass/libs/_global.scss */
 a { text-decoration: none; }
@@ -163,7 +199,7 @@ form input:not([type="submit"]):hover, form input:not([type="submit"]):active, f
 /* line 57, sass/libs/_global.scss */
 form input[type="submit"] { padding: 10px 20px; background: transparent; border: 2px solid #ac8074; color: #ac8074; font-family: "Novecento Sans", "Open Sans", sans-serif; text-transform: uppercase; font-size: 14px; font-size: 0.875em; outline: none; -webkit-transition: .3s ease; transition: .3s ease; }
 /* line 68, sass/libs/_global.scss */
-form input[type="submit"]:hover, form input[type="submit"]:active, form input[type="submit"]:focus { background-color: #ac8074; color: #111113; }
+form input[type="submit"]:hover, form input[type="submit"]:active, form input[type="submit"]:focus { background-color: #ac8074; color: #f7f7f7; }
 
 /* line 75, sass/libs/_global.scss */
 .more-link { padding: 20px 30px 20px 0; background: url(images/arrow.png) no-repeat right center; color: #ac8074; font-size: 14px; font-size: 0.875em; }
@@ -171,11 +207,11 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* Reusable Components Style */
 /* button */
 /* line 6, sass/libs/_components.scss */
-.button { display: inline-block; padding: 15px 35px; border: 3px solid white; color: white; text-transform: uppercase; font-size: 12px; font-size: 0.75em; font-family: "Novecento Sans", "Open Sans", sans-serif; -webkit-transition: .3s ease; transition: .3s ease; }
+.button { display: inline-block; padding: 10px 30px; border: 2px solid #ac8074; color: #ac8074; text-transform: uppercase; font-size: 12px; font-size: 0.75em; font-family: "Novecento Sans", "Open Sans", sans-serif; -webkit-transition: .3s ease; transition: .3s ease; }
 /* line 16, sass/libs/_components.scss */
 .button.invert { background-color: white; color: #ac8074; font-weight: 700; }
 /* line 22, sass/libs/_components.scss */
-.button:hover { border-color: #ac8074; color: #ac8074; }
+.button:hover { border-color: #ac8074; color: #f7f7f7;background-color:#ac8074 ; }
 
 /* fullwidth-block */
 /* line 29, sass/libs/_components.scss */
@@ -211,11 +247,11 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 86, sass/libs/_components.scss */
 .feature header .feature-icon { margin-right: 20px; }
 /* line 88, sass/libs/_components.scss */
-.feature header .feature-title { font-size: 24px; font-size: 1.5em; color: white; margin-bottom: 0; line-height: 1; }
+.feature header .feature-title { font-size: 24px; font-size: 1.5em; color: #313638; margin-bottom: 0; line-height: 1; }
 /* line 94, sass/libs/_components.scss */
-.feature header .feature-subtitle { font-size: 12px; font-size: 0.75em; color: #888; text-transform: uppercase; }
+.feature header .feature-subtitle { font-size: 12px; font-size: 0.75em; color: #444444; text-transform: uppercase; }
 /* line 101, sass/libs/_components.scss */
-.feature-grid .feature { background: #111113; margin-bottom: 0; padding: 50px 30px !important; text-align: center; }
+.feature-grid .feature { background: #668cff; margin-bottom: 0; padding: 50px 30px !important; text-align: center; }
 /* line 109, sass/libs/_components.scss */
 .feature-grid .feature:nth-child(even) { background-color: #242424; }
 /* line 112, sass/libs/_components.scss */
@@ -225,7 +261,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 119, sass/libs/_components.scss */
 .feature-grid .feature p { margin-bottom: 0; }
 /* line 122, sass/libs/_components.scss */
-.feature.boxed { padding: 21px; background-color: #111113; margin-bottom: 30px; }
+.feature.boxed { padding: 21px; background-color: #f7f7f7; margin-bottom: 30px; }
 /* line 127, sass/libs/_components.scss */
 .feature.boxed p { margin-bottom: 0; }
 
@@ -235,7 +271,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
   .quote-section { padding: 30px; } }
 
 /* line 142, sass/libs/_components.scss */
-.quote-slider .slides { *zoom: 1; list-style: none; padding: 0; margin: 0; }
+.quote-slider .slides { zoom: 1; list-style: none; padding: 0; margin: 0; }
 /* line 4, sass/libs/_mixins.scss */
 .quote-slider .slides:after { content: " "; clear: both; display: block; overflow: hidden; height: 0; }
 /* line 148, sass/libs/_components.scss */
@@ -277,13 +313,13 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 
 			} */ }
 /* line 206, sass/libs/_components.scss */
-.quote-slider .flex-control-paging li a { display: block; width: 15px; height: 15px; border: 2px solid #111113; overflow: hiddne; text-indent: -9999px; box-shadow: 0 0 0 2px #4c4c4c; cursor: pointer; }
+.quote-slider .flex-control-paging li a { display: block; width: 15px; height: 15px; border: 2px solid #668cff; overflow: hiddne; text-indent: -9999px; box-shadow: 0 0 0 2px #4c4c4c; cursor: pointer; }
 /* line 216, sass/libs/_components.scss */
 .quote-slider .flex-control-paging li a.flex-active { background: #ac8074; box-shadow: 0 0 0 2px #ac8074; }
 
 /* Timeline */
 /* line 242, sass/libs/_components.scss */
-.timeline { border-top: 3px solid #28292c; *zoom: 1; }
+.timeline { border-top: 3px solid #28292c; zoom: 1; }
 /* line 4, sass/libs/_mixins.scss */
 .timeline:after { content: " "; clear: both; display: block; overflow: hidden; height: 0; }
 @media screen and (max-width: 640px) { /* line 242, sass/libs/_components.scss */
@@ -299,7 +335,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 289, sass/libs/_components.scss */
 .timeline .milestone .year { color: #ac8074; font-family: "Novecento Sans", "Open Sans", sans-serif; font-size: 24px; font-size: 1.5em; margin-bottom: 20px; }
 /* line 295, sass/libs/_components.scss */
-.timeline .milestone .milestone-title { color: white; font-family: "Novecento Sans", "Open Sans", sans-serif; font-size: 14px; font-size: 0.875em; }
+.timeline .milestone .milestone-title { color: #313638; font-family: "Novecento Sans", "Open Sans", sans-serif; font-size: 14px; font-size: 0.875em; }
 
 /* line 303, sass/libs/_components.scss */
 .cta { border: 3px solid #28292c; padding: 50px; text-align: center; font-size: 24px; font-size: 1.5em; text-transform: uppercase; }
@@ -341,7 +377,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 367, sass/libs/_components.scss */
 .team .team-image img { display: block; }
 /* line 371, sass/libs/_components.scss */
-.team .team-name { font-size: 24px; font-size: 1.5em; color: white; text-transform: uppercase; margin-bottom: 0; font-family: "Novecento Sans", "Open Sans", sans-serif; }
+.team .team-name { font-size: 24px; font-size: 1.5em; color: #313638; text-transform: uppercase; margin-bottom: 0; font-family: "Novecento Sans", "Open Sans", sans-serif; }
 /* line 378, sass/libs/_components.scss */
 .team .team-desc { font-size: 14px; font-size: 0.875em; text-transform: uppercase; color: #ac8074; font-family: "Novecento Sans", "Open Sans", sans-serif; font-weight: 600; margin-bottom: 20px; display: block; }
 /* line 387, sass/libs/_components.scss */
@@ -370,14 +406,14 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 .map { min-height: 350px; margin-bottom: 30px; }
 
 /* line 414, sass/libs/_components.scss */
-.contact-info strong { color: white; text-transform: uppercase; font-size: 14px; font-size: 0.875em; font-family: "Novecento Sans", "Open Sans", sans-serif; display: block; margin-bottom: 10px; }
+.contact-info strong { color: #313638; text-transform: uppercase; font-size: 14px; font-size: 0.875em; font-family: "Novecento Sans", "Open Sans", sans-serif; display: block; margin-bottom: 10px; }
 /* line 423, sass/libs/_components.scss */
 .contact-info .contact a { display: block; color: inherit; }
 /* line 428, sass/libs/_components.scss */
 .contact-info p { font-size: 14px; font-size: 0.875em; }
 
 /* line 10, sass/libs/bootstrap-grid/_grid.scss */
-.container { margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; *zoom: 1; }
+.container { margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; zoom: 1; }
 /* line 4, sass/libs/_mixins.scss */
 .container:after { content: " "; clear: both; display: block; overflow: hidden; height: 0; }
 @media (min-width: 768px) { /* line 10, sass/libs/bootstrap-grid/_grid.scss */
@@ -388,12 +424,12 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
   .container { width: 1170px; } }
 
 /* line 30, sass/libs/bootstrap-grid/_grid.scss */
-.container-fluid { margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; *zoom: 1; }
+.container-fluid { margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; zoom: 1; }
 /* line 4, sass/libs/_mixins.scss */
 .container-fluid:after { content: " "; clear: both; display: block; overflow: hidden; height: 0; }
 
 /* line 39, sass/libs/bootstrap-grid/_grid.scss */
-.row { margin-left: -15px; margin-right: -15px; *zoom: 1; }
+.row { margin-left: -15px; margin-right: -15px; zoom: 1; }
 /* line 4, sass/libs/_mixins.scss */
 .row:after { content: " "; clear: both; display: block; overflow: hidden; height: 0; }
 
@@ -981,20 +1017,20 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
   .hidden-print { display: none !important; } }
 /* Header Styles */
 /* line 5, sass/layout/_header.scss */
-.site-header { background-color: #111113; color: white; padding: 30px 0; margin-bottom: 30px; }
+.site-header { background-color: #668cff; color: white; padding: 30px 0; margin-bottom: 30px; }
 
 /* line 13, sass/layout/_header.scss */
-#branding { float: left; }
+.site-header #branding { float: left; }
 /* line 16, sass/layout/_header.scss */
 #branding .branding-copy, #branding .logo { display: inline-block; vertical-align: middle; }
 /* line 20, sass/layout/_header.scss */
 #branding .logo { margin-right: 10px; }
 /* line 23, sass/layout/_header.scss */
-#branding .site-title { margin: 0; font-size: 14px; font-size: 0.875em; font-weight: 600; text-transform: capitalize; line-height: 1; }
+#branding .site-title { margin: 0; font-size: 14px; font-size: 0.875em; font-weight: 600; text-transform: capitalize; line-height: 1; color: #f7f7f7 !important; }
 /* line 30, sass/layout/_header.scss */
 #branding .site-title a { color: inherit; }
 /* line 32, sass/layout/_header.scss */
-#branding .site-description { font-size: 12px; font-size: 0.75em; color: #888; font-family: Arial, sans-serif; }
+#branding .site-description { font-size: 12px; font-size: 0.75em; color: #f7f7f7; font-family: Arial, sans-serif; }
 
 /* line 39, sass/layout/_header.scss */
 .menu-toggle { background-color: transparent; color: white; padding: 10px 20px; border: none; outline: none; font-size: 20px; font-size: 1.25em; display: none; }
@@ -1012,7 +1048,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 64, sass/layout/_header.scss */
 .mobile-navigation .menu a { color: white; padding: 10px 20px; display: block; font-family: "Novecento Sans", "Open Sans", sans-serif; border-left: 4px solid transparent; -webkit-transition: .3s ease; transition: .3s ease; text-transform: uppercase; font-weight: 600; font-size: 12px; font-size: 0.75em; }
 /* line 75, sass/layout/_header.scss */
-.mobile-navigation .menu .current-menu-item a, .mobile-navigation .menu .menu-item:hover a { color: #ac8074; border-left: 4px solid #ac8074; }
+.mobile-navigation .menu .current-menu-item a, .mobile-navigation .menu .menu-item:hover a { color: #f7f7f7; border-left: 4px solid #f7f7f7; }
 
 /* line 81, sass/layout/_header.scss */
 .main-navigation { float: right; }
@@ -1027,7 +1063,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 97, sass/layout/_header.scss */
 .main-navigation .menu-item a { padding: 10px 0; border-bottom: 3px solid transparent; color: white; font-family: "Novecento Sans", "Open Sans", sans-serif; font-size: 12px; font-size: 0.75em; text-transform: uppercase; font-weight: 600; -webkit-transition: .3s ease; transition: .3s ease; }
 /* line 109, sass/layout/_header.scss */
-.main-navigation .menu-item.current-menu-item a, .main-navigation .menu-item:hover a { border-bottom: 3px solid #ac8074; }
+.main-navigation .menu-item.current-menu-item a, .main-navigation .menu-item:hover a { border-bottom: 3px solid #f7f7f7; }
 
 /* Sidebar Styles */
 /* line 3, sass/layout/_content.scss */
@@ -1051,6 +1087,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 .text-right { text-align: right; }
 
 /* line 35, sass/layout/_content.scss */
+.hero {margin-bottom: 30px;}
 .hero img { display: block; max-width: 100%; height: 600px; }
 /* line 39, sass/layout/_content.scss */
 .hero .hero-content { margin-top: 40%; }
@@ -1063,7 +1100,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 
 /* Footer Styles */
 /* line 5, sass/layout/_footer.scss */
-.site-footer { background-color: #111113; padding: 50px 0; text-align: center; }
+.site-footer { background-color: #668cff; padding: 62px 0; text-align: center; }
 
 /* line 11, sass/layout/_footer.scss */
 .subscribe-form { margin-bottom: 30px; background-color: #0c0c0d; padding: 30px; text-align: left; }
@@ -1086,7 +1123,7 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 52, sass/layout/_footer.scss */
 .subscribe-form form .control { position: relative; }
 /* line 53, sass/layout/_footer.scss */
-.subscribe-form form input { border: 4px solid #28292c; border-right: none; background-color: transparent; padding: 10px 100px 10px 20px; width: 100%; height: 70px; color: #888; }
+.subscribe-form form input { border: 4px solid #28292c; border-right: none; background-color: transparent; padding: 10px 100px 10px 20px; width: 100%; height: 70px; color: #444444; }
 /* line 61, sass/layout/_footer.scss */
 .subscribe-form form input:hover, .subscribe-form form input:hover + button, .subscribe-form form input:focus, .subscribe-form form input:focus + button { border-color: #ac8074; }
 /* line 66, sass/layout/_footer.scss */
