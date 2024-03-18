@@ -1032,6 +1032,38 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 32, sass/layout/_header.scss */
 #branding .site-description { font-size: 12px; font-size: 0.75em; color: #f7f7f7; font-family: Arial, sans-serif; }
 
+.caption-image-container {
+  margin: 20px 10px;
+}
+
+.caption-image-container img {
+  width: 100%;
+  height: 200px;
+  /* object-fit: contain; */
+}
+
+.caption-image-container .caption {
+    float: right;
+    color: gray; /* Caption text color */
+    font-size: 8px;
+}
+
+.center-image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-image-container .caption-image-container {
+  width: clamp(250px, 80%, 500px);;
+}
+
+.center-image-container .caption-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+
 /* line 39, sass/layout/_header.scss */
 .menu-toggle { background-color: transparent; color: white; padding: 10px 20px; border: none; outline: none; font-size: 20px; font-size: 1.25em; display: none; }
 @media screen and (max-width: 990px) { /* line 39, sass/layout/_header.scss */
