@@ -5,6 +5,98 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 /* line 61, sass/libs/_normalize.scss */
 audio, canvas, video { display: inline-block; }
 
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+    button[aria-expanded='true'] {
+      border-bottom: 1px solid #123e63;
+    }
+  }
+
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #7288a2;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+      color: #123e63;
+      &::after {
+        cursor: pointer;
+        color: #123e63;
+        border: 1px solid #123e63;
+      }
+    }
+
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid;
+      border-radius: 22px;
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 10px;
+        height: 2px;
+        background: #123e63;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 9px;
+        width: 2px;
+        height: 10px;
+        background: #123e63;
+      }
+    }
+  }
+
+  button[aria-expanded='true'] {
+    color: #123e63;
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+    + .accordion-content {
+      opacity: 1;
+      max-height: 1000px;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+  }
+
+}
+
 .cookie {
   position: fixed;
   bottom: 0;
@@ -381,21 +473,21 @@ form input[type="submit"]:hover, form input[type="submit"]:active, form input[ty
 /* line 395, sass/libs/_components.scss */
 .contact-form { margin-bottom: 50px; }
 /* line 398, sass/libs/_components.scss */
-.contact-form #name { background-image: url("images/icon-user.png"); }
+.contact-form #name { background-image: url("images/user-svgrepo-com.svg"); }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) { /* line 398, sass/libs/_components.scss */
-  .contact-form #name { background-image: url("images/icon-user@2x.png"); background-size: 16px 18px; } }
+  .contact-form #name { background-image: url("images/user-svgrepo-com.svg"); background-size: 16px 18px; } }
 /* line 399, sass/libs/_components.scss */
-.contact-form #email { background-image: url("images/icon-envelope-alt.png"); }
+.contact-form #email { background-image: url("images/email-svgrepo-com.svg"); }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) { /* line 399, sass/libs/_components.scss */
-  .contact-form #email { background-image: url("images/icon-envelope-alt@2x.png"); background-size: 16px 11px; } }
+  .contact-form #email { background-image: url("images/email-svgrepo-com.svg"); background-size: 16px 11px; } }
 /* line 400, sass/libs/_components.scss */
 .contact-form #website { background-image: url("images/icon-globe.png"); }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) { /* line 400, sass/libs/_components.scss */
   .contact-form #website { background-image: url("images/icon-globe@2x.png"); background-size: 16px 16px; } }
 /* line 401, sass/libs/_components.scss */
-.contact-form #message { background-image: url("images/icon-pencil.png"); background-position: 10px 10px; min-height: 200px; }
+.contact-form #message { background-image: url("images/pen-svgrepo-com.svg"); background-position: 10px 10px; min-height: 200px; }
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) { /* line 401, sass/libs/_components.scss */
-  .contact-form #message { background-image: url("images/icon-pencil@2x.png"); background-size: 16px 17px; } }
+  .contact-form #message { background-image: url("images/pen-svgrepo-com.svg"); background-size: 16px 17px; } }
 
 /* line 408, sass/libs/_components.scss */
 .map { min-height: 350px; margin-bottom: 30px; }
